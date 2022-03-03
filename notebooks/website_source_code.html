@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Stroke Prediction</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta
+            content="Stroke rate, health, health care, machine learning, Stroke Prediction, Brain, Encephelon"
+            name="keywords"
+        />
+        <meta
+            content="Enter relevent para describing the website here"
+            name="description"
+        />
+    </head>
+    <header>
+        <h1 style="position: relative; background-color: teal">
+            WHAT IS A STROKE?
+        </h1>
+        <h2 style="background-color: wheat">Here is all you need to know!</h2>
+    </header>
+    <body
+        style="
+            background-color: rgba(90, 173, 199, 0.884);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        "
+    >
+        <p style="background-color: aquamarine">
+            <strong
+                >Stroke is a medical disorder in which the blood arteries in the
+                brain are ruptured, causing damage to the brain. When the supply
+                of blood and other nutrients to the brain is interrupted,
+                symptoms might develop. According to the World Health
+                Organization (WHO), stroke is the greatest cause of death and
+                disability globally. Early recognition of the various warning
+                signs of a stroke can help reduce the severity of the stroke.
+                <img
+                    src="image1MAXpixel.png"
+                    alt="Brain Inflammation-image from MAX PIXEL"
+                    style="float: right; width: 50%; height: 50%"
+            /></strong>
+        </p>
+        <h1 style="background-color: teal">
+            WHY DOES A STROKE AFFECT DIFFERENT PARTS OF THE BODY?
+        </h1>
+        <p style="background-color: aquamarine">
+            <strong
+                >Nerve cells in the brain tissue communicate with other cells to
+                control functions including memory, speech and movement. When a
+                stroke occurs, nerve cells in the brain tissue become injured.
+                As a result of this injury, nerve cells cannot communicate with
+                other cells, and functions are impaired. If a stroke occurs on
+                the right side of the brain, the left side of the body is
+                affected, and vice versa.
+            </strong>
+        </p>
+        <h2>Do you know your stroke risk?</h2>
+        <h3>
+            We are here to help you assess the risk of stroke you might have in
+            the next 5 years. Please fill the following to predict the chances
+            of you having a stroke.
+        </h3>
+        <form action="/website_source_code.html">
+            <h4>Choose your gender</h4>
+            <input type="checkbox" id="gender1" name="gender1" value="Male" />
+            <label for="gender1">Male</label><br />
+            <input type="checkbox" id="gender2" name="gender2" value="Female" />
+            <label for="gender2">Female</label><br />
+            <input type="checkbox" id="gender3" name="gender3" value="Others" />
+            <label for="gender3">Others</label><br />
+            <h4>Enter your age</h4>
+            <input
+                type="text"
+                id="age"
+                name="age"
+                required
+                minlength="2"
+                maxlength="3"
+            />
+            <h4>Do you have hypertension/high blood pressure?</h4>
+            <input type="checkbox" id="bp" name="bp" value="Yes" />
+            <label for="bp">Yes</label><br />
+            <input type="checkbox" id="bp1" name="bp1" value="No" />
+            <label for="bp1">No</label><br />
+            <h4>Do you have a history of heart diseases?</h4>
+            <input type="checkbox" id="heart1" name="heart1" value="Yes" />
+            <label for="heart1">Yes</label><br />
+            <input type="checkbox" id="heart2" name="heart2" value="No" />
+            <label for="heart2">No</label><br />
+            <h4>Are you married?</h4>
+            <input type="checkbox" id="married1" name="married1" value="Yes" />
+            <label for="married1">Yes</label><br />
+            <input type="checkbox" id="married2" name="married2" value="No" />
+            <label for="married2">No</label><br />
+            <h4>What type of organization are you employed in?</h4>
+            <input type="checkbox" id="emp1" name="emp1" value="Private" />
+            <label for="emp1">Private</label><br />
+            <input type="checkbox" id="emp2" name="emp2" value="Governmemt" />
+            <label for="emp2">Governmemt</label><br />
+            <input
+                type="checkbox"
+                id="emp3"
+                name="emp3"
+                value="Self Employed"
+            />
+            <label for="emp3">Self Employed</label><br />
+            <input type="checkbox" id="emp4" name="emp4" value="Unemployed" />
+            <label for="emp4">Unemployed</label><br />
+            <h4>Where do you live?</h4>
+            <input type="checkbox" id="loc1" name="loc1" value="Rural" />
+            <label for="loc1">Rural</label><br />
+            <input type="checkbox" id="loc2" name="loc2" value="Urban" />
+            <label for="loc2">Urban</label><br />
+            <h4>What is your average glucose/sugar level?</h4>
+            <input
+                type="text"
+                id="GluLevl"
+                required
+                minlength="1"
+                maxlength="3"
+            />
+            <h4>Enter your calculated BMI</h4>
+            <h6>BMI=(weight in kg)/(square of your height in meters)</h6>
+            <input type="text" id="bmi" required minlength="1" maxlength="3" />
+            <h4>Do you smoke?</h4>
+            <input
+                type="checkbox"
+                id="smoke1"
+                name="smoke1"
+                value="Formerly Smoked"
+            />
+            <label for="smoke1">Formerly Smoked</label><br />
+            <input
+                type="checkbox"
+                id="smoke2"
+                name="smoke2"
+                value="Never Smoked"
+            />
+            <label for="smoke2">Never Smoked</label><br />
+            <input type="checkbox" id="smoke3" name="smoke3" value="Smokes" />
+            <label for="smoke3">Smokes</label><br /><br />
+            <input type="button" value="SUBMIT" />
+        </form>
+    </body>
+</html>
