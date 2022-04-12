@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Stroke Prediction</title>
-<link rel="icon" href="C:\Users\Kaavya Jayakrishnan\Desktop\DAC STROKE PREDICTION\LogoTitle.jpg" type="icon">
+<link rel="icon" href="{{url_for('static',filename = 'images/LogoTitle.jpg')}}" type="icon">
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="Stroke rate, health, health care, machine learning, Stroke Prediction, Brain, Encephelon" name="keywords" />
 <meta
@@ -66,11 +66,11 @@
         <a class="active" href="#home">Home</a>
         <a href="#strokeform">Predictor</a>
         <a href="#about">About</a>
-        <a href="#feedback">Feedback</a>
+        <a href="#Feedback">Feedback</a>
       </div>
  <style>
     .elementor-widget-container {
-        background-image: url(brushStrokeYellow.jpg);
+        background-image: url("{{url_for('static',filename = 'images/brushStrokeYellow.jpg')}}");
         background-repeat: repeat;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -105,7 +105,7 @@
         reduce the severity of the stroke.
         <div class="container" id="gif1">
              
-            <img id="gif" src="deepBrainBleed.gif"  alt="animations by CleevelandClinic" ALIGN="center" style="float:right;width:40%;height:40%">
+            <img id="gif" src="{{url_for('static',filename = 'images/deepBrainBleed.gif')}}"  alt="animations by CleevelandClinic" ALIGN="center" style="float:right;width:40%;height:40%">
              
         </div>
    </strong></p>
@@ -136,7 +136,7 @@ First, your doctor will do a physical examination. They'll put your mental acuit
         <li>Sudden Vision Impairment</li>
     </ul>
     </strong></p>
-    <img src="image3FAST.jpg" alt="F.A.S.T-stroke signs" ALIGN="RIGHT" style="width:30%;height:30%;">
+    <img src="{{url_for('static',filename = 'images/image3FAST.jpg')}}" alt="F.A.S.T-stroke signs" ALIGN="RIGHT" style="width:30%;height:30%;">
     <h1 style="background-color:transparent;color: white;">ACTING F.A.S.T IS IMPORTANT FOR STROKE</h1>
   
     <p style="background-color: #2E8BC0;font-size: 18px; float:inline-start;"><strong>Acting F.A.S.T. can assist stroke patients in receiving the care they require. The most<br> effective stroke treatments are only possible if the stroke is noticed and 
@@ -171,10 +171,10 @@ First, your doctor will do a physical examination. They'll put your mental acuit
             
             <div class="container" id="gif1">
              
-            <img id="gif" src="strokegif1.gif"  alt="animations by makeagif" ALIGN="center" style="width:40%;height:10%">
+            <img id="gif" src="{{url_for('static',filename = 'images/strokegif1.gif')}}"  alt="animations by makeagif" ALIGN="center" style="width:40%;height:10%">
              
             </div>
-            <img src="image1MAXpixel.png" alt="Brain Inflammation-image from MAX PIXEL" style="float:right;width:50%;height:50%;">
+            <img src="{{url_for('static',filename = 'images/image1MAXpixel.png')}}" alt="Brain Inflammation-image from MAX PIXEL" style="float:right;width:50%;height:50%;">
             <h1 style="background-color:transparent;color: white;">SUPPLYING THE BRAIN WITH BLOOD</h1>
         
                  <p style="color: white;font-size: 18px;"><strong>The brain is
@@ -195,54 +195,54 @@ First, your doctor will do a physical examination. They'll put your mental acuit
     Please fill the following to predict the chances of you having a stroke.</h3>
 <form action="/result" method="POST">
     <h4>Choose your gender</h4>
-    <input type="checkbox" id="gender1" name="gender1" value="0">
+    <input type="radio" class="radio" id="gender" name="gender" value="0">
     <label for="gender1" >Male</label><br>
-    <input type="checkbox" id="gender2" name="gender2" value="1">
+    <input type="radio" class="radio" id="gender" name="gender" value="1">
     <label for="gender2">Female</label><br>
     <h4>Enter your age</h4>
     <input type="text" id="age" name="age" required minlength="2" maxlength="3">
     <h4>Do you have hypertension/high blood pressure?</h4>
-    <input type="checkbox" id="bp" name="bp" value="1">
+    <input type="radio" id="bp" name="bp" value="1">
     <label for="bp">Yes</label>
-    <input type="checkbox" id="bp1" name="bp1" value="0">
+    <input type="radio" id="bp1" name="bp" value="0">
     <label for="bp1">No</label><br>
     <h4>Do you have a history of heart diseases?</h4>
-    <input type="checkbox" id="heart1" name="heart1" value="1">
+    <input type="radio" id="heart1" name="heart" value="1">
     <label for="heart1">Yes</label>
-    <input type="checkbox" id="heart2" name="heart2" value="0">
+    <input type="radio" id="heart2" name="heart" value="0">
     <label for="heart2">No</label><br>
     <h4>Are you married?</h4>
-    <input type="checkbox" id="married1" name="married1" value="0">
+    <input type="radio" id="married1" name="married" value="1">
     <label for="married1">Yes  </label>
-    <input type="checkbox" id="married2" name="married2" value="1">
+    <input type="radio" id="married2" name="married" value="0">
     <label for="married2">No</label><br>
     <h4>What type of organization are you employed in?</h4>
-    <input type="checkbox" id="emp1" name="emp1" value="0">
+    <input type="radio" id="emp1" name="emp" value="0">
     <label for="emp1">Private</label><br>
-    <input type="checkbox" id="emp2" name="emp2" value="2">
-    <label for="emp2">Governmemt</label><br>
-    <input type="checkbox" id="emp3" name="emp3" value="1">
+    <input type="radio" id="emp3" name="emp" value="1">
     <label for="emp3">Self Employed</label><br>
-    <input type="checkbox" id="emp4" name="emp4" value="3">
+    <input type="radio" id="emp2" name="emp" value="2">
+    <label for="emp2">Governmemt</label><br>
+    <input type="radio" id="emp4" name="emp" value="3">
     <label for="emp4">Student</label><br>
-    <input type="checkbox" id="emp5" name="emp5" value="4">
+    <input type="radio" id="emp5" name="emp" value="4">
     <label for="emp4">Unemployed</label><br>
     <h4>Where do you live?</h4>
-    <input type="checkbox" id="loc1" name="loc1" value="1">
-    <label for="loc1">Rural</label><br>
-    <input type="checkbox" id="loc2" name="loc2" value="0">
+    <input type="radio" id="loc2" name="loc1" value="0">
     <label for="loc2">Urban</label><br>
+    <input type="radio" id="loc1" name="loc1" value="1">
+    <label for="loc1">Rural</label><br>
     <h4>What is your average glucose/sugar level?</h4>
     <input type="text" id="GluLevl" name="GluLevl">
     <h4>Enter your calculated BMI</h4>
     <h6>BMI=(weight in kg)/(square of your height in meters)</h6>
     <input type="text" id="bmi" name="bmi">
     <h4>Do you smoke?</h4>
-    <input type="checkbox" id="smoke1" name="smoke1" value="0">
+    <input type="radio" id="smoke1" name="smoke1" value="0">
     <label for="smoke1">Formerly Smoked</label><br>
-    <input type="checkbox" id="smoke2" name="smoke2" value="1">
+    <input type="radio" id="smoke2" name="smoke1" value="1">
     <label for="smoke2">Never Smoked</label><br>
-    <input type="checkbox" id="smoke3" name="smoke3" value="2">
+    <input type="radio" id="smoke3" name="smoke1" value="2">
     <label for="smoke3">Smokes</label><br><br>
     <input type="submit" value="SUBMIT" style="background-color: green;">
 </form>
@@ -259,6 +259,7 @@ First, your doctor will do a physical examination. They'll put your mental acuit
 </section>
 <h1 style="background-color:transparent;width: fit-content;color: white;">Fill this out!Your feedback will help us predict better.</h1>
 </div>
+
 <style>    
     * {    
       box-sizing: border-box;    

@@ -23,7 +23,7 @@ def result():
         to_predict_list = request.form.to_dict()
         print("to-predict", to_predict_list)
         to_predict_list = list(to_predict_list.values())
-        to_predict_list = list(map(int, to_predict_list))
+        to_predict_list = list(map(float, to_predict_list))
         result = ValuePredictor(to_predict_list)	
         if int(result)== 1:
         	prediction ='You have chances of stroke'
