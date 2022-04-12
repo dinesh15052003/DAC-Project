@@ -29,7 +29,7 @@ def result():
         	prediction ='You have chances of stroke'
         else:
             prediction ='You dont have chances of stroke'		
-        return render_template("website_source_code.html", prediction = prediction)
+        return render_template("result.html", prediction = prediction)
 
 if __name__ == '__main__':
     app.run(debug=True, threaded = False)
